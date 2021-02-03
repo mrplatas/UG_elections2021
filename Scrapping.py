@@ -7,7 +7,7 @@ import csv
 import subprocess
 import re
 
-os.chdir('/Users/fredericcochinard/Dropbox/Platas_Cochinard/3_2021 Elections/Results 2021 Uganda/2_PDF/')
+os.chdir('')
 
 # module for scrapping all url
 
@@ -25,7 +25,7 @@ for link in soup.find_all('a'):
             link = 'https://www.ec.or.ug/' + y
             name = re.sub('https://www.ec.or.ug/ecresults/2021/PRESIDENT_', '', link)
             r = requests.get(link, stream=True)
-            address_pdf = '/Users/fredericcochinard/Dropbox/Platas_Cochinard/3_2021 Elections/Results 2021 Uganda/2_PDF/' + name
+            address_pdf = '' + name
             with open(address_pdf, 'wb') as fd:
                 fd.write(r.content)
 
